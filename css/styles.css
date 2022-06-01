@@ -1,22 +1,33 @@
-body {font-family: 'Raleway', sans-serif;
-    font-family: 'Roboto', sans-serif;
-color: #212121;
-background-color:  #E5E5E5;
-
-letter-spacing: 0.03em}
-     
-
 /* Colors  */
-
 /* Main Color */
 #212121
 /* Accent */
 #2196F3
 /* Primary background Color */
-#E5E5E5
+ #FFFFFF
 /* Secondary background Color */
 #F5F4FA
 
+/* About root */
+:root{--primary-text-color:#212121;
+--accet-color:#2196F3 ;
+--primary-background-color: #FFFFFF ;
+--secondary-background-color: #F5F4FA;
+}
+
+
+body {font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+color: #212121;
+background-color: #FFFFFF ;
+letter-spacing: 0.03em
+}
+     /*About is- hiden  */
+.is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+  }
 /* About logo */
 .nav-logo {font-family: 'Raleway';
     font-style: normal;
@@ -30,10 +41,10 @@ letter-spacing: 0.03em}
 
 
 /* About nav */
-.nav-link {font-family: 'Roboto';
+.nav-link {font-family: inherit;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
@@ -47,33 +58,43 @@ letter-spacing: 0.03em}
 
 /* About contacts */
 .contact-link,
-.contact-mobile {font-family: 'Roboto';
+.contact-mobile {font-family: inherit;
     font-style: normal;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color:#757575;
     }
+    .contact-link { color:#757575}
+    .contact-link:hover,
+    .contact-link:focus {color: #2196F3
+    
+    }
 
-    .nav-logo,.nav-link, .contact-link, .contact-mobile {text-decoration: none;}
-/* About buttons */
-.button-list {font-family: inherit;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.62;
-letter-spacing: 0.03em;
-cursor: pointer;}
+    .contact-mobile { color:#757575;}
+    .contact-mobile:hover,
+    .contact-mobile:focus {color: #2196F3;}
 
-.button-list {color:#212121;}
-.button-list:hover,
-.button-list:focus{color:#FFFFFF;
-    background-color: #2196F3; 
-}
-/* About main */
-.main-content{background-color: #E5E5E5;}
+ .nav-logo,.nav-link, .contact-link, .contact-mobile {text-decoration: none;}
+
+ /* About buttons */
+.button-list {font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.62;
+    line-height: 26px;
+    /* identical to box height, or 162% */
+    
+    letter-spacing: 0.03em;}
+
+    .portfolio-button {color:#212121;}
+    .portfolio-button:hover,
+    .portfolio-button:focus{color:#FFFFFF;
+        background-color: #2196F3; 
+    }
+    
 /* About hero */
-.hero-title { font-family: inherit;
+.hero { font-family: inherit;
     font-style: normal;
     font-weight: 900;
     font-size: 44px;
@@ -84,7 +105,7 @@ cursor: pointer;}
     background-color: #212121;
     color:  #FFFFFF;
     }
-
+     
     /* About hero-button */
 .hero-button 
  {font-family: inherit;
@@ -97,20 +118,45 @@ align-items: center;
 text-align: center;
 letter-spacing: 0.06em;
 cursor: pointer;
-}
-.hero-button {color:#212121;}
-.hero-button:hover,
-.hero-button:focus{color:#FFFFFF;
-    background-color: #2196F3; 
-}
+ color:#212121;}
+    
+ .hero-button {color:#212121;}
+    .hero-button:hover,
+    .hero-button:focus{color:#FFFFFF;
+        background-color: #2196F3; 
+    }
    
 /* About list */
-.list {list-style: none;}
+.list, .gallery-item,.button-list,.nav-list {list-style: none;}
 /* About decorations */
-.nav-link,.nav-logo, .contact-link,.contact-mobile, .item, {text-decoration: none;}
+.nav-link,.nav-logo, .contact-link,.contact-mobile, .item {
+    text-decoration: none;}
 
 /* About titles */
 .h1,.h2,.h3 {font-family:#212121 ;}
+.h3 {font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    }
+    .p {font-family: inherit;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        /* or 171% */
+        
+        letter-spacing: 0.03em;
+        
+        color: #757575;
+        }
+        .company {background-color:#F5F4FA ;}
 
 /* About footer-logo */
 .footer-logo {font-family: 'Raleway';
@@ -121,8 +167,8 @@ cursor: pointer;
     letter-spacing: 0.03em;
     color: #FFFFFF;}
 
-    .footer-logo { color: #FFFFF;}
-.footer-logo-accent {color: #2196F3;}
+    .footer-logo { color: #FFFFFF;}
+.footer-logo-accent {color:#2196F3 ;}
 
 /* About footer */
 .footer-content{
@@ -141,7 +187,7 @@ cursor: pointer;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
-        line-height: 24px;
+        line-height: 1.71;
         /* or 171% */
         
         letter-spacing: 0.03em;
@@ -150,7 +196,54 @@ cursor: pointer;
         }
 
         .adress {font-style: normal;}
-    .footer-logo, .footer-link,.footer-maps, .footer-phone {text-decoration:none; }
+      .logo{ font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+line-height: 1.19;
+/* identical to box height */
+letter-spacing: 0.03em;}
 
-.company {background-color: #F5F4FA;}
+.footer-maps {font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+/* or 171% */
 
+letter-spacing: 0.03em;
+
+color: #FFFFFF;}
+    .footer-maps:hover,
+    .footer-maps:focus {color: #2196F3}
+
+    .footer-link{font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        /* or 171% */
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+        }
+        .footer-link:hover,
+        .footer-link:focus {color: #2196F3}
+
+.footer-phone{font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    /* or 171% */
+    
+    letter-spacing: 0.03em;
+    
+    color: rgba(255, 255, 255, 0.6);
+    }
+    .footer-phone:hover,
+    .footer-phone:focus {color: #2196F3}
+
+.footer-logo, .footer-link,.footer-maps, .footer-phone {text-decoration:none; }
+
+
+ 
